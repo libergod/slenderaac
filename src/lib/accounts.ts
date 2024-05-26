@@ -14,7 +14,8 @@ export enum AccountType {
 	Tutor,
 	SeniorTutor,
 	GameMaster,
-	God,
+	God = 5,
+	Admin = 6,
 }
 
 export const isAccountType = (value: unknown): value is AccountType =>
@@ -23,4 +24,5 @@ export const isAccountType = (value: unknown): value is AccountType =>
 		value === AccountType.Tutor ||
 		value === AccountType.SeniorTutor ||
 		value === AccountType.GameMaster ||
-		value === AccountType.God);
+		value === AccountType.God ||
+		value === AccountType.Admin);
